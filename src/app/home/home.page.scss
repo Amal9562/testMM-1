@@ -9,22 +9,26 @@ ion-content{
     
    
     
-.login_btn {--background: linear-gradient(to right, #ff6e7f 0%, #bfe9ff  51%, #ff6e7f  100%)}
 .login_btn {
+    --background: #ab46b4;
+    width: 100%;
+}
+
+// .login_btn {
    
-   text-align: center;
-   text-transform: uppercase;
-   transition: 0.5s;
-   background-size: 200% auto;
-   color: rgb(66, 65, 65);    
-   width: 100%;        
-   box-shadow: 0 0 20px #eee;
-   border-radius: 10px;
-   display: block;
-   font-family: 'Courier New';
-   font-weight: 900;
+//    text-align: center;
+//    text-transform: uppercase;
+//    transition: 0.5s;
+//    background-size: 200% auto;
+//    color: rgb(66, 65, 65);    
+//    width: 100%;        
+//    box-shadow: 0 0 20px #eee;
+//    border-radius: 10px;
+//    display: block;
+//    font-family: 'Courier New';
+//    font-weight: 900;
    
- }
+//  }
 
  
 
@@ -59,4 +63,13 @@ font-weight: 900;
 }
 .mobile_number{
     position:static;
+}
+.footer_styles{
+   
+    --background: linear-gradient(to bottom, #fbc2eb 100%, #a6c1ee 0%);
+    background-color:#fbc2eb;
+}
+.header_styles{
+    --background: linear-gradient(to bottom, #a6c1ee 0%, #a6c1ee 100%);
+    background-color:#a6c1ee;
 }
