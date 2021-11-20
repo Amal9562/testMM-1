@@ -1,0 +1,87 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button defaultHref="">
+        back
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title style="top: 50%;">
+      Registration Page
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+
+<form style="margin-top:  30%;border: 1px solid grey; width: 90%; margin-left: 17px;box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); border-radius: 8px;" [formGroup]="testMachineForm">
+  <ion-grid style="box-shadow: black;">
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <ion-input  type="text" formControlName="name" placeholder="Enter your name"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  
+  
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <ion-input type="text" formControlName="email" placeholder="Enter your email"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  
+  
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            
+            <ion-input (ionChange)="inputAge($event)" maxlength=10   min="{{min}}" max="{{max}}" type="number" placeholder="Enter age" formControlName="age">
+
+            </ion-input>
+            
+          </ion-item>
+         
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  
+
+ 
+
+  
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <ion-input maxlength=10 formControlName="contact" placeholder="Enter contact" type="number"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+ 
+ 
+
+ 
+  </ion-grid>
+
+</form>
+
+
+</ion-content>
+<ion-footer>
+  <ion-row>
+    <ion-col size=12>
+      <ion-button color="secondary" style="width: 100%;" type="submit" [disabled]="!this.testMachineForm.valid" (click)="ViewData(this.testMachineForm.value)" >Submit</ion-button>
+    </ion-col>
+
+    
+  </ion-row>
+</ion-footer>
