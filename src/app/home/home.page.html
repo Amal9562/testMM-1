@@ -33,7 +33,7 @@
     <ion-col size=11.5 class="footer_styles">
       <ion-list class="footer_styles">
         <ion-item class="footer_styles">
-          <ion-button [disabled]="" class="login_btn">Login</ion-button>
+          <ion-button (click)="login_submit()" [disabled]="!this.LoginForm.valid" class="login_btn">Login</ion-button>
         </ion-item>
       </ion-list>
     </ion-col>

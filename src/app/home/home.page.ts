@@ -1,5 +1,6 @@
 import { Component,OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { IonContent, IonSlides, ModalController, ToastController } from '@ionic/angular';
 @Component({
   selector: 'app-home',
@@ -12,7 +13,8 @@ export class HomePage {
   constructor(
     private fb:FormBuilder,
     private modal:ModalController,
-    private toast:ToastController) {
+    private toast:ToastController,
+    private router:Router) {
 
     this.LoginForm=this.fb.group({
      
@@ -25,7 +27,9 @@ export class HomePage {
   async ngOnInit(){
   
   }
-  
+  login_submit(){
+    this.router.navigateByUrl("home/registration")
+  }
     
     
 // async show(data)

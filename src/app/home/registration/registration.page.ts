@@ -24,8 +24,8 @@ export class RegistrationPage implements OnInit {
 
         name:["",[Validators.required,Validators.pattern("[a-zA-Z][a-zA-Z ][a-zA-Z][a-zA-Z]+")]],
         email:["",[Validators.required,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]],
-        age:["",[Validators.required,]],
-        contact:["",[Validators.required,Validators.pattern('0\[6-9]\\d{9}')]]
+        age:["",[Validators.required,Validators.min(18),Validators.max(30)]],
+        contact:["",[Validators.required,Validators.pattern('[6-9]\\d{9}')]]
       
        });
      }
